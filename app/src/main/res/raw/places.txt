@@ -1,0 +1,10 @@
+Arcade
+Park
+Aquarium
+Theatre
+Opera
+Museum
+Beach 
+Library
+Zoo
+Stadium

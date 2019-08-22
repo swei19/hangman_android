@@ -1,0 +1,10 @@
+Chicken
+Steak
+Fries
+Spaghetti
+Pizza
+Ravioli
+Lettuce
+Sushi
+Burrito
+Jambalaya

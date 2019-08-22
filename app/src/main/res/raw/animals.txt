@@ -1,0 +1,10 @@
+Giraffe
+Kangaroo
+Zebra
+Lion
+Tiger
+Dog
+Cat 
+Rhino
+Cow
+Bird
