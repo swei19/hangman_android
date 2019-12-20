@@ -113,7 +113,7 @@ public class MainUI extends AppCompatActivity {
     }
 
     public void goToNextGameOrHighScore(View v){
-        if (categoryChosen.equals("competitive")){
+        if (categoryChosen.equals("competitive")){d
             if (currentWrongGuesses == NUMBER_OF_WRONG_GUESSES_ALLOWED){
                 Intent endGameIntent = new Intent(this, EndGameUI.class);
                 endGameIntent.putExtra("score", competitiveCarryOverScore + score.scoreGame(currentGuessWord, currentWrongGuesses, guessedLetters));
