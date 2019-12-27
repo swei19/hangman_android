@@ -46,7 +46,7 @@ public class EndGameUI extends AppCompatActivity {
 
         initScoreList();
         setDisplayScore();
-
+        writeToScoreTextFile();
     }
 
     public void initScoreList() {
@@ -58,7 +58,6 @@ public class EndGameUI extends AppCompatActivity {
         } else {
             numOfScores = NUM_HIGH_SCORES_TO_DISPLAY;
         }
-
 
 
         for (int i = 0; i < numOfScores; i++){
@@ -150,7 +149,7 @@ public class EndGameUI extends AppCompatActivity {
                 break;
             }
         }
-
+        editor.commit();
 
     }
 
