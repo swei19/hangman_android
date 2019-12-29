@@ -39,4 +39,5 @@
     <string name="default_wrong_guesses">Num Wrong Guesses: 0</string>
     <string name="default_score">Current Score: 0</string>
     <string name="cat_chosen">Animals</string>
+    <string name="btn_hint">Hint</string>
 </resources>
