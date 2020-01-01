@@ -81,7 +81,7 @@ public class MainUI extends AppCompatActivity {
         TextView testView = findViewById(R.id.testTextView);
         testView.setText(currentGuessWord);
 
-        currentScoreView.setText("Current Score: " + competitiveCarryOverScore);
+        currentScoreView.setText("" + competitiveCarryOverScore);
 
     }
 
@@ -187,7 +187,7 @@ public class MainUI extends AppCompatActivity {
             } else {
                 currentWrongGuesses += 1;
 
-                wrongGuessesView.setText("Num Wrong Guesses: " + currentWrongGuesses);
+                wrongGuessesView.setText("" + currentWrongGuesses);
 
                 readImage(currentWrongGuesses, false);
 
@@ -214,15 +214,9 @@ public class MainUI extends AppCompatActivity {
             toGuess.setText(currentGuessWord);
         }
         int updatedScore = score.scoreGame(currentGuessWord, currentWrongGuesses, guessedLetters);
-        currentScoreView.setText("Current Score: " + (updatedScore + competitiveCarryOverScore));
+        currentScoreView.setText("" + (updatedScore + competitiveCarryOverScore));
 
 
     }
 
 }
-
-
-
-
-
-
