@@ -33,18 +33,22 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="@string/enter_name_field"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/newGame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/header"
-        android:layout_width="wrap_content"
-        android:layout_height="26dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="189dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/merienda"
         android:text="@string/new_game_header"
+        android:textAlignment="center"
+        android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

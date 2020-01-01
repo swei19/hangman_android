@@ -25,6 +25,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
+        android:background="@android:color/holo_orange_dark"
         android:onClick="goToNextGameOrHighScore"
         app:layout_constraintStart_toEndOf="@+id/currentWrongGuesses"
         app:layout_constraintTop_toTopOf="parent" />
@@ -64,8 +65,8 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="415dp"
-        android:layout_height="254dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="4dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="-2dp">
@@ -73,7 +74,7 @@
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="60dp"
-            android:layout_margin="8dp"
+            android:layout_marginHorizontal="6dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="256dp">
@@ -82,15 +83,22 @@
                 android:id="@+id/btna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_a" />
+
 
             <Button
                 android:id="@+id/btnb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_b" />
 
@@ -98,7 +106,10 @@
                 android:id="@+id/btnc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_c" />
 
@@ -106,7 +117,10 @@
                 android:id="@+id/btnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_d" />
 
@@ -114,7 +128,10 @@
                 android:id="@+id/btne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_e" />
 
@@ -122,7 +139,10 @@
                 android:id="@+id/btnf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_f" />
 
@@ -130,7 +150,10 @@
                 android:id="@+id/btng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_g" />
         </LinearLayout>
@@ -138,9 +161,7 @@
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="6dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +172,10 @@
                 android:id="@+id/btnh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_h" />
 
@@ -159,7 +183,10 @@
                 android:id="@+id/btni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_i" />
 
@@ -167,7 +194,10 @@
                 android:id="@+id/btnj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_j" />
 
@@ -175,7 +205,10 @@
                 android:id="@+id/btnk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_k" />
 
@@ -183,7 +216,10 @@
                 android:id="@+id/btnl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_l" />
 
@@ -191,7 +227,10 @@
                 android:id="@+id/btnm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_m" />
 
@@ -199,18 +238,19 @@
                 android:id="@+id/btnn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_n" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="400dp"
+            android:layout_width="350dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="29dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -220,7 +260,10 @@
                 android:id="@+id/btno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_o" />
 
@@ -228,7 +271,10 @@
                 android:id="@+id/btnp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_p" />
 
@@ -236,7 +282,10 @@
                 android:id="@+id/btnq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_q" />
 
@@ -244,7 +293,10 @@
                 android:id="@+id/btnr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_r" />
 
@@ -252,7 +304,10 @@
                 android:id="@+id/btns"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_s" />
 
@@ -260,7 +315,10 @@
                 android:id="@+id/btnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_t" />
 
@@ -268,11 +326,9 @@
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="400dp"
+            android:layout_width="350dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginStart="29dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -282,7 +338,10 @@
                 android:id="@+id/btnu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_u" />
 
@@ -290,7 +349,10 @@
                 android:id="@+id/btnv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_v" />
 
@@ -298,7 +360,10 @@
                 android:id="@+id/btnw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_w" />
 
@@ -306,7 +371,10 @@
                 android:id="@+id/btnx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_x" />
 
@@ -314,7 +382,10 @@
                 android:id="@+id/btny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_y" />
 
@@ -322,9 +393,13 @@
                 android:id="@+id/btnz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_z" />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -361,6 +436,7 @@
         android:layout_marginTop="172dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button"
         android:onClick="onClick"
         android:text="@string/btn_hint"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -379,9 +455,9 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.648"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toEndOf="@+id/hangmanImage"
         app:layout_constraintTop_toTopOf="@+id/newGameButton"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintVertical_bias="0.419" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

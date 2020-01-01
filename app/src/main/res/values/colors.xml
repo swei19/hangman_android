@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="Independence">#424874</color>
+    <color name="PaleYellow">#EAEFB1</color>
+    <color name="BrightYellow">#FF9F1C</color>
+    <color name="Tangerine">#F58A07</color>
 </resources>
