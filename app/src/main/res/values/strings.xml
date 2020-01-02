@@ -2,7 +2,7 @@
     <string name="app_name">Hangman</string>
     <string name="new_game">New Game</string>
     <string name="new_game_header">Hangman</string>
-    <string name="enter_name_field">Name Field</string>
+    <string name="enter_name_field">Enter Name</string>
     <string name="competitive_mode">Competitive Mode</string>
     <string name="casual_mode">Casual Mode</string>
     <string name="cat_animals">Animals</string>
@@ -39,4 +39,5 @@
     <string name="default_wrong_guesses">Num Wrong Guesses: 0</string>
     <string name="default_score">Current Score: 0</string>
     <string name="cat_chosen">Animals</string>
+    <string name="btn_hint">Hint</string>
 </resources>

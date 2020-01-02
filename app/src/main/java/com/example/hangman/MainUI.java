@@ -15,16 +15,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Random;
 import java.util.Set;
 
 public class MainUI extends AppCompatActivity {
 
     private final static int NUMBER_OF_WRONG_GUESSES_ALLOWED = 6;
-    //private static int NUMBER_OF_WRONG_GUESSES_ALLOWED;
+
+    private final static int NUMBER_OF_HINTS_ALLOWED = 2;
+
     private Score score;
     private int currentWrongGuesses = 0;
     private int currentCorrectGuesses = 0;
     private int competitiveCarryOverScore = 0;
+    private int currentNumHintUsed = 0;
 
     private ArrayList<String> guessedLetters = new ArrayList<String>();
     private Display currentDisplay;
@@ -87,7 +91,7 @@ public class MainUI extends AppCompatActivity {
         TextView testView = findViewById(R.id.testTextView);
         testView.setText(currentGuessWord);
 
-        currentScoreView.setText("Current Score: " + competitiveCarryOverScore);
+        currentScoreView.setText("" + competitiveCarryOverScore);
 
     }
 
@@ -162,13 +166,30 @@ public class MainUI extends AppCompatActivity {
 
     public void onClick(View v) {
         TextView toGuess = findViewById(R.id.guessWordAndUnderlines);
+
         if (currentWrongGuesses < NUMBER_OF_WRONG_GUESSES_ALLOWED){
             Button currentButton = findViewById(v.getId());
-            guessedLetters.add((String) currentButton.getText());
+            CharSequence letterToAdd = currentButton.getText();
+            if (currentButton.getText().equals("Hint")){
+                System.out.println("HELLO MY FRIEND");
+                Random rand = new Random();
+                int chooseRand  = rand.nextInt(currentGuessWord.length());
+                letterToAdd = currentGuessWord.substring(chooseRand, chooseRand + 1);
 
+                while (guessedLetters.contains(letterToAdd)){
+                    chooseRand  = rand.nextInt(currentGuessWord.length());
+                    letterToAdd = currentGuessWord.substring(chooseRand, chooseRand + 1);
+                }
+
+                System.out.println("HELLO MY FRIEND:" + letterToAdd);
+                currentNumHintUsed += 1;
+            }
+            guessedLetters.add((String) letterToAdd);
+            TextView debug = findViewById(R.id.debugText);
+            debug.setText(letterToAdd);
             toGuess.setText(currentDisplay.displayLetterAndEmptyWordUnderlines(guessedLetters));
 
-            if (uniqueLettersOfGuessedWord.contains(currentButton.getText())) {
+            if (uniqueLettersOfGuessedWord.contains(letterToAdd)) {
                 currentCorrectGuesses += 1;
 
                 if (gameIsWon(uniqueLettersOfGuessedWord)) {
@@ -182,7 +203,7 @@ public class MainUI extends AppCompatActivity {
             } else {
                 currentWrongGuesses += 1;
 
-                wrongGuessesView.setText("Num Wrong Guesses: " + currentWrongGuesses);
+                wrongGuessesView.setText("" + currentWrongGuesses);
 
                 readImage(currentWrongGuesses, false);
 
@@ -195,20 +216,25 @@ public class MainUI extends AppCompatActivity {
 
             }
 
+            if (currentButton.getText().equals("Hint")) {
+                if (currentNumHintUsed == NUMBER_OF_HINTS_ALLOWED){
+                    currentButton.setEnabled(false);
 
-            currentButton.setClickable(false);
+                }
+
+            } else {
+                currentButton.setEnabled(false);
+
+            }
+
+
         } else {
             toGuess.setText(currentGuessWord);
         }
         int updatedScore = score.scoreGame(currentGuessWord, currentWrongGuesses, guessedLetters);
-        currentScoreView.setText("Current Score: " + (updatedScore + competitiveCarryOverScore));
+        currentScoreView.setText("" + (updatedScore + competitiveCarryOverScore));
 
 
     }
+
 }
-
-
-
-
-
-

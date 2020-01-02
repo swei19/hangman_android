@@ -6,46 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainUI">
 
-    <TextView
-        android:id="@+id/currentWrongGuesses"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/default_wrong_guesses"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.013"
-        app:layout_constraintStart_toEndOf="@+id/currentScore"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/newGameButton"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/rounded_button2"
+        android:fontFamily="monospace"
         android:onClick="goToNextGameOrHighScore"
-        app:layout_constraintStart_toEndOf="@+id/currentWrongGuesses"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/currentScore"
-        android:layout_width="75dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -64,16 +34,20 @@
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="415dp"
-        android:layout_height="254dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-2dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guessWordAndUnderlines">
 
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="60dp"
-            android:layout_margin="8dp"
+            android:layout_marginHorizontal="6dp"
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="256dp">
@@ -82,15 +56,22 @@
                 android:id="@+id/btna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_a" />
+
 
             <Button
                 android:id="@+id/btnb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_b" />
 
@@ -98,7 +79,10 @@
                 android:id="@+id/btnc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_c" />
 
@@ -106,7 +90,10 @@
                 android:id="@+id/btnd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_d" />
 
@@ -114,7 +101,10 @@
                 android:id="@+id/btne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_e" />
 
@@ -122,7 +112,10 @@
                 android:id="@+id/btnf"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_f" />
 
@@ -130,7 +123,10 @@
                 android:id="@+id/btng"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_g" />
         </LinearLayout>
@@ -138,9 +134,7 @@
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginHorizontal="6dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -151,7 +145,10 @@
                 android:id="@+id/btnh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_h" />
 
@@ -159,7 +156,10 @@
                 android:id="@+id/btni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_i" />
 
@@ -167,7 +167,10 @@
                 android:id="@+id/btnj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_j" />
 
@@ -175,7 +178,10 @@
                 android:id="@+id/btnk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_k" />
 
@@ -183,7 +189,10 @@
                 android:id="@+id/btnl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_l" />
 
@@ -191,7 +200,10 @@
                 android:id="@+id/btnm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_m" />
 
@@ -199,19 +211,21 @@
                 android:id="@+id/btnn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_n" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="372dp"
+
+            android:layout_width="350dp"
             android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center"
+            android:layout_marginStart="29dp"
+
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,7 +235,10 @@
                 android:id="@+id/btno"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_o" />
 
@@ -229,7 +246,10 @@
                 android:id="@+id/btnp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_p" />
 
@@ -237,7 +257,10 @@
                 android:id="@+id/btnq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_q" />
 
@@ -245,7 +268,10 @@
                 android:id="@+id/btnr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_r" />
 
@@ -253,7 +279,10 @@
                 android:id="@+id/btns"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_s" />
 
@@ -261,7 +290,10 @@
                 android:id="@+id/btnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_t" />
 
@@ -269,11 +301,11 @@
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="29dp"
+
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -283,7 +315,10 @@
                 android:id="@+id/btnu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_u" />
 
@@ -291,7 +326,10 @@
                 android:id="@+id/btnv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_v" />
 
@@ -299,7 +337,10 @@
                 android:id="@+id/btnw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_w" />
 
@@ -307,15 +348,23 @@
                 android:id="@+id/btnx"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_x" />
 
             <Button
                 android:id="@+id/btny"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
+
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_y" />
 
@@ -323,24 +372,29 @@
                 android:id="@+id/btnz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="1dp"
                 android:layout_weight="1"
+                android:background="@color/Tangerine"
+                android:fontFamily="@font/merienda"
                 android:onClick="onClick"
                 android:text="@string/btn_z" />
+
         </LinearLayout>
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/guessWordAndUnderlines"
-        android:layout_width="244dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="6dp"
+
+        android:layout_width="305dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="monospace"
         android:gravity="center"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hangmanImage" />
 
@@ -349,12 +403,115 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="16dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currentScore" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hintButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/semi_round_button"
+        android:fontFamily="monospace"
+        android:onClick="onClick"
+        android:text="@string/btn_hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hangmanImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/debugText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="debug"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toEndOf="@+id/hangmanImage"
+        app:layout_constraintTop_toBottomOf="@+id/testTextView"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="341dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="240dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/merienda"
+            android:text="TextView"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="43dp"
+                android:layout_height="31dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star" />
+
+            <TextView
+                android:id="@+id/currentScore"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="7dp"
+                android:textAlignment="textStart"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="81dp" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="43dp"
+                android:layout_height="31dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cross" />
+
+            <TextView
+                android:id="@+id/currentWrongGuesses"
+                android:layout_width="75dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="7dp"
+                android:text="0"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
     <WebView
         android:id="@+id/webview"

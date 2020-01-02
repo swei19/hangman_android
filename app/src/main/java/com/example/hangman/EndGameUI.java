@@ -46,7 +46,7 @@ public class EndGameUI extends AppCompatActivity {
 
         initScoreList();
         setDisplayScore();
-
+        writeToScoreTextFile();
     }
 
     public void initScoreList() {
@@ -58,7 +58,6 @@ public class EndGameUI extends AppCompatActivity {
         } else {
             numOfScores = NUM_HIGH_SCORES_TO_DISPLAY;
         }
-
 
 
         for (int i = 0; i < numOfScores; i++){
@@ -142,6 +141,7 @@ public class EndGameUI extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
 
+
         for (int i = 0; i < scoreBoard.size(); i++) {
             HighScore currentHighScore = scoreBoard.get(i);
             editor.putString("" + i, currentHighScore.getName() + " " + currentHighScore.getScore());
@@ -150,7 +150,7 @@ public class EndGameUI extends AppCompatActivity {
                 break;
             }
         }
-
+        editor.commit();
 
     }
 
