@@ -61,7 +61,9 @@ public class Score {
      *  f,h,v,w,y are worth 4 points each
      * 	k is worth 5 pts
      * 	j,x are worth 8 pts each
-     * 	q,z are worth 10 pts each
+     * 	q,z are worth 10 pts
+     *
+     *
      *
      * @return points Multiplier for how many points a specific letter is worth
      */

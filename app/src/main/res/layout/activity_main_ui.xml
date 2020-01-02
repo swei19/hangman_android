@@ -206,11 +206,12 @@
 
         <LinearLayout
             android:id="@+id/linearLayout2"
-            android:layout_width="400dp"
+            android:layout_width="372dp"
             android:layout_height="60dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:gravity="center"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -268,9 +269,9 @@
 
         <LinearLayout
             android:id="@+id/linearLayout3"
-            android:layout_width="400dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="369dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:orientation="horizontal"
@@ -313,7 +314,7 @@
             <Button
                 android:id="@+id/btny"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClick"
                 android:text="@string/btn_y" />
@@ -331,14 +332,15 @@
 
     <TextView
         android:id="@+id/guessWordAndUnderlines"
-        android:layout_width="116dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_width="244dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="6dp"
+        android:gravity="center"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hangmanImage" />
 
@@ -353,5 +355,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/currentScore" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="399dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="106dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
