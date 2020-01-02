@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,7 +21,9 @@ import java.util.Set;
 public class MainUI extends AppCompatActivity {
 
     private final static int NUMBER_OF_WRONG_GUESSES_ALLOWED = 6;
+
     private final static int NUMBER_OF_HINTS_ALLOWED = 2;
+
     private Score score;
     private int currentWrongGuesses = 0;
     private int currentCorrectGuesses = 0;
@@ -32,6 +35,7 @@ public class MainUI extends AppCompatActivity {
 
     private Set<String> uniqueLettersOfGuessedWord = new HashSet<String>();
     private ImageView hangmanImage;
+    //private WebView gifImage;
 
     String currentGuessWord;
     String playerName;
@@ -39,6 +43,7 @@ public class MainUI extends AppCompatActivity {
     TextView wrongGuessesView;
     Button afterGameButton;
     String categoryChosen;
+    WebView gifImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,10 @@ public class MainUI extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView);
         textView.setText(playerName);
 
+        WebView myWebView = (WebView) findViewById(R.id.webview);
+        //WebView mywebview = findViewById(R.id.webview);
+        myWebView.loadUrl("file:///android_asset/webpage.html");
+
         currentScoreView = findViewById(R.id.currentScore);
         wrongGuessesView = findViewById(R.id.currentWrongGuesses);
         afterGameButton = findViewById(R.id.newGameButton);;
@@ -62,6 +71,7 @@ public class MainUI extends AppCompatActivity {
         currentGuessWord = gw.selectWord();
 
         uniqueLettersOfGuessedWord = gw.getUniqueLettersOfSelectedWord();
+        //NUMBER_OF_WRONG_GUESSES_ALLOWED = uniqueLettersOfGuessedWord.size();
 
         currentDisplay = new Display(currentGuessWord);
         TextView toGuess = findViewById(R.id.guessWordAndUnderlines);
@@ -93,15 +103,21 @@ public class MainUI extends AppCompatActivity {
     public void readImage(int numWrongGuesses, boolean wonGame)
     {
         String filename = null;
-        String imageFormat = ".png";
+        //String imageFormat = ".png";
+        String imageFormat = ".gif";
 
-        if (numWrongGuesses != NUMBER_OF_WRONG_GUESSES_ALLOWED && !wonGame) {
-            filename = numWrongGuesses + imageFormat;
+        if (numWrongGuesses == 0) {
+
+            filename = "0.png";
+        }
+        else if (numWrongGuesses != NUMBER_OF_WRONG_GUESSES_ALLOWED && !wonGame) {
+            filename = "NoGif" + imageFormat;
+            //webview.loadUrl("file:///android_asset/your_html.html");
 
         } else if (wonGame) {
-            filename = "Winner.png";
+            filename = "WinnerGif.gif";
         } else {
-            filename = "Lose.png";
+            filename = "LoserGif.gif";
         }
 
         hangmanImage = findViewById(R.id.hangmanImage);
