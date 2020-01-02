@@ -9,22 +9,23 @@
 
     <TextView
         android:id="@+id/scoreBoardMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="274dp"
+        android:layout_height="72dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Hello my friend"
+        android:fontFamily="@font/merienda"
+        android:gravity="center"
+        android:text="HighScore Board"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="379dp"
-        android:layout_height="664dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="384dp"
+        android:layout_height="486dp"
+        android:gravity="bottom|center|fill|top"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,54 +35,80 @@
             android:id="@+id/score1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/score9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/score10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:gravity="center" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

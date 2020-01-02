@@ -202,11 +202,13 @@ public class MainUI extends AppCompatActivity {
 
             if (currentButton.getText().equals("Hint")) {
                 if (currentNumHintUsed == NUMBER_OF_HINTS_ALLOWED){
-                    currentButton.setClickable(false);
+                    currentButton.setEnabled(false);
+
                 }
 
             } else {
-                currentButton.setClickable(false);
+                currentButton.setEnabled(false);
+
             }
 
 

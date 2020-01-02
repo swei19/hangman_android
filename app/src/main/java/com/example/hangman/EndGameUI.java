@@ -141,6 +141,7 @@ public class EndGameUI extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
 
+
         for (int i = 0; i < scoreBoard.size(); i++) {
             HighScore currentHighScore = scoreBoard.get(i);
             editor.putString("" + i, currentHighScore.getName() + " " + currentHighScore.getScore());

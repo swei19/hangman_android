@@ -42,22 +42,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText editText = (EditText) findViewById(R.id.editText);
         String playerName = editText.getText().toString();
 
-        Button competitiveButton = findViewById(R.id.competitiveMode);
+        if (!playerName.equals("Enter Name")){
+            Button competitiveButton = findViewById(R.id.competitiveMode);
 
-        int clickedRadioButtonID = catGroup.getCheckedRadioButtonId();
-        RadioButton clickedRadioButton = findViewById(clickedRadioButtonID);
-        intent.putExtra(EXTRA_MESSAGE, playerName);
+            int clickedRadioButtonID = catGroup.getCheckedRadioButtonId();
+            RadioButton clickedRadioButton = findViewById(clickedRadioButtonID);
+            intent.putExtra(EXTRA_MESSAGE, playerName);
 
-        if (clickedRadioButtonID != -1) {
-            intent.putExtra("CATEGORY_CHOSEN", clickedRadioButton.getText().toString().toLowerCase());
-            startActivity(intent);
-        } else if (!competitiveButton.isEnabled()){
-            intent.putExtra("CATEGORY_CHOSEN", "competitive");
-            startActivity(intent);
+
+
+            if (clickedRadioButtonID != -1) {
+                intent.putExtra("CATEGORY_CHOSEN", clickedRadioButton.getText().toString().toLowerCase());
+                startActivity(intent);
+            } else if (!competitiveButton.isEnabled()){
+                intent.putExtra("CATEGORY_CHOSEN", "competitive");
+                startActivity(intent);
+            } else {
+                errorMessage.setVisibility(View.VISIBLE);
+                errorMessage.setText("Please select a category");
+                System.out.println("DUMA:" + playerName);
+            }
+
         } else {
             errorMessage.setVisibility(View.VISIBLE);
-            errorMessage.setText("Please select a category");
+            errorMessage.setText("Please enter a name");
         }
+
+
 
 
 
